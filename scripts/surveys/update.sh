@@ -12,11 +12,11 @@ curl "${API}${URL_PATH}/${ID}" \
   --data '{
     "survey": {
       "title": "'"${TITLE}"'",
-        "questions": {
-          "content": "'"${CONTENT}"'",
-          "responses": {
-            "answer1": "'"${ANS1}"'",
-            "answer2": "'"${ANS2}"'"
+      "questions": {
+        "content": "'"${CONTENT}"'",
+        "responses": {
+          "answer1": "'"${ANS1}"'",
+          "answer2": "'"${ANS2}"'"
           }
         }
     }
