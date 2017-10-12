@@ -40,7 +40,7 @@ const update = (req, res, next) => {
   delete req.body._owner  // disallow owner reassignment
   // const id = { _id: req.params.id }
   // console.log('req survey is ', req.survey)
-  // console.log('req questions is ', req.survey.questions.id)
+  console.log('req questions is ', req.survey.questions[0]._id)
   // console.log('req responses are ', req.survey.questions.responses)
   const question = req.body.survey.questions
   // console.log('question ID is ', req.params.question.id)
