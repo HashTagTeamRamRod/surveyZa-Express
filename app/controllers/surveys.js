@@ -37,14 +37,16 @@ const create = (req, res, next) => {
 }
 
 const update = (req, res, next) => {
-  delete req.body._owner  // disallow owner reassignment.
-  const id = { _id: req.params.id }
+  delete req.body._owner  // disallow owner reassignment
+  // const id = { _id: req.params.id }
+  // console.log('req survey is ', req.survey)
+  console.log('req questions is ', req.survey.questions[0]._id)
+  // console.log('req responses are ', req.survey.questions.responses)
   const question = req.body.survey.questions
-  console.log('id is ', question._id)
   // console.log('question ID is ', req.params.question.id)
   const response = req.body.survey.responses
   // const responseId = Survey.question.children.id(_id)
-  Survey.update(id, { $set: { questions: question, responses: response } })
+  req.survey.update({ $set: { questions: question, responses: response } })
     .then(console.log)
     .then(() => res.sendStatus(204))
     .catch(next)
