@@ -40,9 +40,11 @@ const update = (req, res, next) => {
   delete req.body._owner  // disallow owner reassignment.
   const id = { _id: req.params.id }
   const question = req.body.survey.questions
-  console.log('question is ', question)
-  console.log('id is ', id)
-  Survey.update(id, { $push: { questions: question } })
+  console.log('id is ', question._id)
+  // console.log('question ID is ', req.params.question.id)
+  const response = req.body.survey.responses
+  // const responseId = Survey.question.children.id(_id)
+  Survey.update(id, { $set: { questions: question, responses: response } })
     .then(console.log)
     .then(() => res.sendStatus(204))
     .catch(next)

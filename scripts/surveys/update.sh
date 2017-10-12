@@ -13,7 +13,11 @@ curl "${API}${URL_PATH}/${ID}" \
     "survey": {
       "title": "'"${TITLE}"'",
         "questions": {
-          "content":"'"${CONTENT}"'"
+          "content": "'"${CONTENT}"'",
+          "responses": {
+            "answer1": "'"${ANS1}"'",
+            "answer2": "'"${ANS2}"'"
+          }
         }
     }
   }'
