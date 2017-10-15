@@ -11,9 +11,17 @@ const responseSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  answer1Count: {
+    type: Number,
+    default: 0
+  },
   answer2: {
     type: String,
     required: true
+  },
+  answer2Count: {
+    type: Number,
+    default: 0
   }
 }, {
   timestamps: true
