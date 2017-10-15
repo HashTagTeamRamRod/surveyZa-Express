@@ -9,7 +9,7 @@ const setUser = require('./concerns/set-current-user')
 const setModel = require('./concerns/set-mongoose-model')
 
 const index = (req, res, next) => {
-  Survey.find()
+  Survey.find().sort({updatedAt: -1})
     .then(surveys => res.json({
       surveys: surveys.map((e) =>
         e.toJSON({ virtuals: true, user: req.user }))
@@ -44,6 +44,7 @@ const update = (req, res, next) => {
   // console.log('req response is ', req.survey.questions[0].responses[0].answer1)
   // console.log('req responses are ', req.survey.questions.responses)
   console.log('body is ', req.body)
+
   const question = req.body.surveys.questions
 
   const response = req.body.surveys.responses
