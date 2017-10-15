@@ -1,3 +1,10 @@
+## SurveyZa Back End ReadMe
+
+BACKEND REPO: https://github.com/HashTagTeamRamRod/surveyZa-Express
+BACKEND DEPLOYED: http://salty-oasis-73744.herokuapp.com/surveys
+FRONT END REPO: https://github.com/HashTagTeamRamRod/surveyZaFront
+FRONT END DEPLOYED: https://hashtagteamramrod.github.io/surveyZaFront/
+
 ## USER STORIES
 
 As an unregistered user, I would like to be able to sign up with an email, password, and password confirmation, so that I can sign in.
